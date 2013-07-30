@@ -16,12 +16,17 @@
     //
     function onDeviceReady() {
         window.addEventListener("batterylow", onBatteryLow, false);
+		window.addEventListener("batterystatus", onBatteryStatus, false);
+
     }
 
     // Handle the batterylow event
     //
     function onBatteryLow(info) {
-        alert("Battery Level Low " + info.level + "%");
+        alert("Battery Level Low : " + info.level + "%");
+    }
+    function onBatteryStatus(info) {
+        alert("Battery Status : " + info.level + "%");
     }
 
     </script>
