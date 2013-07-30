@@ -17,6 +17,8 @@
     function onDeviceReady() {
         window.addEventListener("batterylow", onBatteryLow, false);
 		window.addEventListener("batterystatus", onBatteryStatus, false);
+		window.addEventListener("batterycritical", onBatteryCritical, false);
+
 
     }
 
@@ -27,6 +29,9 @@
     }
     function onBatteryStatus(info) {
         alert("Battery Status : " + info.level + "%");
+    }
+	function onBatteryCritical(info) {
+        alert("Battery Level Critical " + info.level + "%\nRecharge Now!");
     }
 
     </script>
