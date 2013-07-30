@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battery Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.addEventListener("batterylow", onBatteryLow, false);
+    }
+
+    // Handle the batterylow event
+    //
+    function onBatteryLow(info) {
+        alert("Battery Level Low " + info.level + "%");
+    }
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+  </body>
+</html>
